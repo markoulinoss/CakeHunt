@@ -49,7 +49,7 @@ end
 -- ── PLAYER (irida) ── IridaSprite.png sheet, 21×34 frames ──────────────────
 -- The sheet is a 9×9 grid (2px gutters, 23×36 cell stride): each row is one
 -- facing direction (S, SE, E, NE, N, NW, W, SW, S) with a 9-frame walk cycle.
-local PLAYER_IMG = love.graphics.newImage("assets/IridaSprite.png")
+local PLAYER_IMG = love.graphics.newImage("assets/sprites/characters/IridaSprite.png")
 local PFW, PFH = 21, 34
 local PLAYER_ROW = { down = 0, right = 2, up = 4, left = 6 }
 local PLAYER_QUADS = {}
@@ -81,7 +81,7 @@ S.playerW, S.playerH = 16, 20
 -- ── INSTRUCTOR ── instructor.png sheet ─────────────────────────────────────
 -- Single row of ten 140×140 cells (10-frame idle, one facing direction);
 -- the character occupies roughly x 57..89, y 44..96 of its cell.
-local INST_IMG = love.graphics.newImage("assets/instructor.png")
+local INST_IMG = love.graphics.newImage("assets/sprites/characters/instructor.png")
 local INST_QUADS = {}
 for frame = 0, 9 do
     INST_QUADS[frame + 1] = love.graphics.newQuad(
@@ -100,7 +100,7 @@ end
 -- ── DIOGENIS (strict dad) ── Diogenis_Idle.png sheet ───────────────────────
 -- 4×4 grid of 64×64 cells: each row is a facing direction (down, up, left,
 -- right) with a 4-frame idle. The character occupies x 20..42, y 17..46.
-local DAD_IMG = love.graphics.newImage("assets/Diogenis_Idle.png")
+local DAD_IMG = love.graphics.newImage("assets/sprites/characters/Diogenis_Idle.png")
 local DAD_ROW = { down = 0, up = 1, left = 2, right = 3 }
 local DAD_QUADS = {}
 for dir, row in pairs(DAD_ROW) do
@@ -125,7 +125,7 @@ end
 -- ── ROMANOS (charming friend) ── romanosSprite.png sheet ───────────────────
 -- Animation sheet on a 9×5 grid of 60×46 cells; the first row is a 5-frame
 -- front-facing idle. The character occupies x 21..37, y 8..41 of its cell.
-local ROM_IMG = love.graphics.newImage("assets/romanosSprite.png")
+local ROM_IMG = love.graphics.newImage("assets/sprites/characters/romanosSprite.png")
 local ROM_QUADS = {}
 for frame = 0, 4 do
     ROM_QUADS[frame + 1] = love.graphics.newQuad(
@@ -145,7 +145,7 @@ end
 -- ── MARKOULINOS (boyfriend) ── markoulinos_sprite.png sheet ────────────────
 -- Irregularly packed 736×687 sheet; only the symmetric front-facing frame
 -- at x 189..309, y 36..228 is used, drawn as a static pose.
-local MARK_IMG  = love.graphics.newImage("assets/markoulinos_sprite.png")
+local MARK_IMG  = love.graphics.newImage("assets/sprites/characters/markoulinos_sprite.png")
 local MARK_QUAD = love.graphics.newQuad(189, 36, 121, 193, MARK_IMG:getDimensions())
 local MARK_SCALE = 0.2   -- ~24×39 on canvas, a touch taller than the player
 
@@ -163,8 +163,8 @@ end
 -- ── CAT ── IdleCatb.png (7-frame idle) + JumpCabt.png (13-frame leap) ──────
 -- Both sheets are single rows of 32×32 cells, cat facing right; idle content
 -- sits at y 8..29 of its cell.
-local CAT_IDLE_IMG = love.graphics.newImage("assets/IdleCatb.png")
-local CAT_JUMP_IMG = love.graphics.newImage("assets/JumpCabt.png")
+local CAT_IDLE_IMG = love.graphics.newImage("assets/sprites/characters/IdleCatb.png")
+local CAT_JUMP_IMG = love.graphics.newImage("assets/sprites/characters/JumpCabt.png")
 local CAT_IDLE_QUADS, CAT_JUMP_QUADS = {}, {}
 for frame = 0, 6 do
     CAT_IDLE_QUADS[frame + 1] = love.graphics.newQuad(
@@ -196,7 +196,7 @@ S.catW, S.catH = 16, 16
 -- The cake art occupies x 23..78, y 4..88 of the file; drawn at 0.35 scale
 -- it is ~20px wide, centred on the same 20×24 logical box the old
 -- pixel-grid sprite used, with the plate resting on the box floor.
-local CAKE_IMG   = love.graphics.newImage("assets/birthday_cake.png")
+local CAKE_IMG   = love.graphics.newImage("assets/sprites/items/birthday_cake.png")
 local CAKE_SCALE = 0.35
 function S.drawCake(x,y)
     S.shadow(x+10, y+24, 22)
@@ -233,11 +233,11 @@ S.cookieW, S.cookieH = 12, 12
 -- ── CAR ── Miami-synth sprites, 184×68, faces left ─────────────────────────
 -- car1.png parked; running/car-running1..5.png while driving (wheel spin +
 -- body bob). The art includes its own ground shadow.
-local CAR_IDLE_IMG = love.graphics.newImage("assets/Miami-synth-files/sprites/car1.png")
+local CAR_IDLE_IMG = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/sprites/car1.png")
 local CAR_RUN_IMGS = {}
 for i = 1, 5 do
     CAR_RUN_IMGS[i] = love.graphics.newImage(
-        "assets/Miami-synth-files/sprites/running/car-running"..i..".png")
+        "assets/sprites/environment/Miami-synth-files/sprites/running/car-running"..i..".png")
 end
 
 -- driving: plays the running animation (wheels spinning)

@@ -2,7 +2,7 @@
 local Dialogue     = require "systems.dialogue"
 local Transition   = require "systems.transition"
 local Collectibles = require "systems.collectibles"
-local Sprites      = require "assets.sprites"
+local Sprites      = require "systems.sprites"
 local Movement     = require "systems.movement"
 local BV           = require "systems.battle_visuals"
 
@@ -543,16 +543,16 @@ function S3:keyreleased(key) self.keys[key] = false end
 -- Kitchen art: Floor.png (three 45×36 tiles, 9px pattern so they tile
 -- seamlessly), walls.png (three 48×80 wall textures), and
 -- "kitchen furniture.png" (loose furniture pieces, quads below).
-local FLOOR_IMG = love.graphics.newImage("assets/Floor.png")
-local WALL_IMG  = love.graphics.newImage("assets/walls.png")
-local FURN_IMG  = love.graphics.newImage("assets/kitchen furniture.png")
+local FLOOR_IMG = love.graphics.newImage("assets/sprites/environment/Floor.png")
+local WALL_IMG  = love.graphics.newImage("assets/sprites/environment/walls.png")
+local FURN_IMG  = love.graphics.newImage("assets/sprites/environment/kitchen furniture.png")
 -- Catch-minigame ingredients (16×16 each)
-local EGG_IMG   = love.graphics.newImage("assets/egg_white.png")
-local MILK_IMG  = love.graphics.newImage("assets/milk_bottled.png")
+local EGG_IMG   = love.graphics.newImage("assets/sprites/items/egg_white.png")
+local MILK_IMG  = love.graphics.newImage("assets/sprites/items/milk_bottled.png")
 -- Cat corner props: Pet_Food_Bowls.png is a 4×5 sheet of 16×16 bowls,
 -- Pet_Kibble_Bags.png a 12×5 sheet of 32×32 bags
-local PET_BOWL_IMG = love.graphics.newImage("assets/Pet_Food_Bowls.png")
-local PET_BAG_IMG  = love.graphics.newImage("assets/Pet_Kibble_Bags.png")
+local PET_BOWL_IMG = love.graphics.newImage("assets/sprites/items/Pet_Food_Bowls.png")
+local PET_BAG_IMG  = love.graphics.newImage("assets/sprites/items/Pet_Kibble_Bags.png")
 local BOWL_Q       = love.graphics.newQuad(32, 0, 16, 16, PET_BOWL_IMG:getDimensions())  -- red, some kibble
 local BAG_CLOSED_Q = love.graphics.newQuad(0,  0, 32, 32, PET_BAG_IMG:getDimensions())   -- folded shut
 local BAG_OPEN_Q   = love.graphics.newQuad(128, 0, 32, 32, PET_BAG_IMG:getDimensions())  -- kibble spilling out

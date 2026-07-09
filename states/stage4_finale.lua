@@ -3,7 +3,7 @@ local Dialogue    = require "systems.dialogue"
 local Transition  = require "systems.transition"
 local Rhythm      = require "systems.rhythm"
 local Collectibles = require "systems.collectibles"
-local Sprites     = require "assets.sprites"
+local Sprites     = require "systems.sprites"
 local Movement    = require "systems.movement"
 
 local S4 = {}

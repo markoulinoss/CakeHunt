@@ -3,7 +3,7 @@
 local Dialogue     = require "systems.dialogue"
 local Transition   = require "systems.transition"
 local Collectibles = require "systems.collectibles"
-local Sprites      = require "assets.sprites"
+local Sprites      = require "systems.sprites"
 local Movement     = require "systems.movement"
 local BV           = require "systems.battle_visuals"
 
@@ -567,11 +567,11 @@ function S2:keyreleased(key) self.keys[key] = false end
 -- 180, so everything is drawn at native scale shifted up 60px (crops sky,
 -- keeps the road at the bottom). back/buildings/palms tile horizontally;
 -- highway is a designed 896px strip so we show the lamp-post slice of it.
-local BG_BACK  = love.graphics.newImage("assets/Miami-synth-files/Layers/back.png")
-local BG_SUN   = love.graphics.newImage("assets/Miami-synth-files/Layers/sun.png")
-local BG_BLD   = love.graphics.newImage("assets/Miami-synth-files/Layers/buildings.png")
-local BG_PALMS = love.graphics.newImage("assets/Miami-synth-files/Layers/palms.png")
-local BG_HWY   = love.graphics.newImage("assets/Miami-synth-files/Layers/highway.png")
+local BG_BACK  = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/Layers/back.png")
+local BG_SUN   = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/Layers/sun.png")
+local BG_BLD   = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/Layers/buildings.png")
+local BG_PALMS = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/Layers/palms.png")
+local BG_HWY   = love.graphics.newImage("assets/sprites/environment/Miami-synth-files/Layers/highway.png")
 
 local function drawPath()
     local dy = -60

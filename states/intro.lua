@@ -11,12 +11,12 @@ local CW, CH = 320, 180
 -- Drifting clouds for the opening cutscene backdrop
 local CLOUD_IMGS = {}
 for i = 1, 7 do
-    CLOUD_IMGS[i] = love.graphics.newImage("assets/cloud_background/Cloud"..i..".png")
+    CLOUD_IMGS[i] = love.graphics.newImage("assets/sprites/environment/cloud_background/Cloud"..i..".png")
 end
 
 -- Title-screen cake: birthday_cake.png is 100×100, art occupies x 23..78,
 -- y 4..88; drawn at 0.7 scale, centred under the title
-local CAKE_IMG   = love.graphics.newImage("assets/birthday_cake.png")
+local CAKE_IMG   = love.graphics.newImage("assets/sprites/items/birthday_cake.png")
 local CAKE_SCALE = 0.7
 
 function Intro.new(sm, audio, font)

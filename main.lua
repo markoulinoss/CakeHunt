@@ -6,7 +6,7 @@
 love.graphics.setDefaultFilter("nearest", "nearest")
 
 local StateMachine = require "systems.statemachine"
-local Audio        = require "assets.audio"
+local Audio        = require "systems.audio"
 local luis          = require "systems.luis_instance"
 local Settings      = require "systems.settings_ui"
 

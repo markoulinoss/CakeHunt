@@ -2,7 +2,7 @@
 local Transition   = require "systems.transition"
 local Collectibles = require "systems.collectibles"
 local Dialogue     = require "systems.dialogue"
-local Sprites      = require "assets.sprites"
+local Sprites      = require "systems.sprites"
 local Movement     = require "systems.movement"
 
 local Ending = {}
@@ -11,8 +11,8 @@ Ending.__index = Ending
 local CW, CH = 320, 180
 
 -- Kitchen art for the post-credits chase (same quads as stage 3)
-local FLOOR_IMG  = love.graphics.newImage("assets/Floor.png")
-local WALL_IMG   = love.graphics.newImage("assets/walls.png")
+local FLOOR_IMG  = love.graphics.newImage("assets/sprites/environment/Floor.png")
+local WALL_IMG   = love.graphics.newImage("assets/sprites/environment/walls.png")
 local FLOOR_Q    = love.graphics.newQuad(49,  5, 45, 36, FLOOR_IMG:getDimensions())
 local WALL_TOP_Q = love.graphics.newQuad(112,  5, 48, 32, WALL_IMG:getDimensions())
 local WALL_BOT_Q = love.graphics.newQuad(112, 21, 48, 34, WALL_IMG:getDimensions())

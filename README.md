@@ -58,13 +58,16 @@ cakeHunt/
 │   ├── movement.lua       player movement helpers
 │   ├── battle_visuals.lua battle presentation effects
 │   ├── settings_ui.lua    settings menu
-│   └── luis_instance.lua  shared LUIS UI instance
+│   ├── luis_instance.lua  shared LUIS UI instance
+│   ├── sprites.lua        sprite loading / drawing
+│   └── audio.lua          music + SFX definitions
 ├── luis/                  LUIS UI library (vendored, see luis/LICENSE)
 ├── assets/
-│   ├── sprites.lua        sprite loading / drawing
-│   ├── audio.lua          music + SFX definitions
 │   ├── audio/             music and sound files
-│   └── *.png, ...         sprite sheets and backgrounds
+│   └── sprites/
+│       ├── characters/    player, NPC, and cat sprite sheets
+│       ├── environment/   floors, walls, furniture, cloud + Miami backgrounds
+│       └── items/         cake, ingredients, pet items
 ├── states/
 │   ├── intro.lua          title screen + opening cutscene
 │   ├── stage1_studio.lua  dance studio — rhythm battle

@@ -4,7 +4,7 @@ local Dialogue    = require "systems.dialogue"
 local Transition  = require "systems.transition"
 local Rhythm      = require "systems.rhythm"
 local Collectibles = require "systems.collectibles"
-local Sprites     = require "assets.sprites"
+local Sprites     = require "systems.sprites"
 local Movement    = require "systems.movement"
 
 local S1 = {}
@@ -191,9 +191,9 @@ function S1:keyreleased(key) self.keys[key] = false end
 -- slices with a 15-row offset cover the 66px wall band seamlessly, same
 -- trick as the kitchen), Floor.png brick tile as wood parquet, and
 -- "livingroom furniture.png" pieces for the home-studio props.
-local FLOOR_IMG = love.graphics.newImage("assets/Floor.png")
-local WALL_IMG  = love.graphics.newImage("assets/walls.png")
-local FURN_IMG  = love.graphics.newImage("assets/livingroom furniture.png")
+local FLOOR_IMG = love.graphics.newImage("assets/sprites/environment/Floor.png")
+local WALL_IMG  = love.graphics.newImage("assets/sprites/environment/walls.png")
+local FURN_IMG  = love.graphics.newImage("assets/sprites/environment/livingroom furniture.png")
 
 local function furnQ(x, y, w, h) return love.graphics.newQuad(x, y, w, h, FURN_IMG:getDimensions()) end
 local FLOOR_Q    = love.graphics.newQuad(1, 6, 45, 35, FLOOR_IMG:getDimensions())    -- brick/parquet tile
